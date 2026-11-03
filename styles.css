@@ -75,3 +75,102 @@ h1 {
     padding: 12x 16px;
     margin-bottom: 20px
 }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 22px
+}
+
+.pc {
+    position: relative;
+    background: var(--card);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.tag {
+    position: absolute;
+    top: -12px;
+    right: 10px;
+    background: var(--green);
+    color: #fff;
+    font-family: var(--px);
+    font-size: 11px;
+    letter-spacing: 2px;
+    padding: 1px 8px
+}
+
+.img {
+    height: 110px;
+    border: 2px solid var(--ink);
+    background: var(--cream);
+    display: grid;
+    place-items: center;
+    color: var(--muted);
+    font-size: 12px
+}
+
+.pc h3 {
+    font-family: var(--px);
+    font-weight: 600;
+    font-size: 18px;
+    margin: 2px 0 0;
+    line-height: 1.25
+}
+
+.pr {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-top: auto
+}
+
+.now {
+    color: var(--red);
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase
+}
+
+.now.sale {
+    color: var(--orange)
+}
+
+.old {
+    color: var(--muted);
+    text-decoration: line-through;
+    font-size: 11px;
+    text-transform: uppercase
+}
+
+.add {
+    font-family: var(--px);
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: var(--card);
+    color: var(--ink);
+    border: 3px solid var(--ink);
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 0
+}
+
+.add:hover {
+    background: var(--ink);
+    color: var(--cream)
+}
+
+.add:active {
+    transform: translate(2px, 2px)
+}
+
+.none {
+    grid-column: 1/-1;
+    color: var(--muted)
+}
