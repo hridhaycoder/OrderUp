@@ -1,0 +1,70 @@
+:root {
+    --cream: #f5eed7;
+    --card: #Faf6e6;
+    --note: #ece2c3;
+    --ink: #1b1b29;
+    --muted: #7a77667;
+    --red: #d9475a;
+    --orange: #ee8f3f;
+    --green: #5aa469;
+    --px: "Pixelify Sans", ui-monospace, Menlo, monospace;
+    --sans: "Poppins", system-ui, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--san);
+    font-size: 14px;
+    line-height: 1.45em
+}
+
+.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 28px;
+    border-bottom: 4px solid var(--ink)
+}
+
+.logo {
+    font-family: var(--px);
+    font-weight: 700;
+    font-size: 28px;
+    letter-spacing: 3px
+}
+
+.chip i {
+    width: 22px;
+    height: 22px;
+    background: var(--orange);
+    border: 2px solid var(--ink)
+}
+
+.chip small {
+    font-weight: 500;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 1px
+}
+
+.page {
+    max-width: 1000px;
+    padding: 32px 28 px 56px;
+    margin: 0 auto
+}
+
+h1 {
+    font-family: var(--px);
+    font-weight: 700;
+    font-size: 40px;
+    margin: 0 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.1
+}
