@@ -68,3 +68,10 @@ h1 {
     letter-spacing: 1px;
     line-height: 1.1
 }
+
+.note {
+    background: var(--note);
+    border: 2px solid var(--ink);
+    padding: 12x 16px;
+    margin-bottom: 20px
+}
