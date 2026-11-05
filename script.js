@@ -11,14 +11,36 @@ var ITEMS = [
 
 var $ = function (id) { return document.getElementById(id); };
 
-function drawGrid() {
-    $("grid").innerHTML = ITEMS.map(function (i) {
-        return '<div class="pc">' + (i.isNew ? '<span class="tag">NEW</span>' : '') +
-            '<div class="img">image</div><h3>' + i.name + '</h3>' +
-            '<div class="pr"><span class="now' + (i.was ? ' sale' : '') + '">' + i.price + ' px</span>' +
-            (i.was ? '<span class="old">' + i.was + ' px</span>' : '') + '</div>' +
-            '<button class="add" data-add="' + i.id + '">Add to order</button></div>';
+var CATS = ["All", "Mains", "Sides", "Drinks", "Dessert"];
+var cat = "All", term = "";
+
+function drawChips() {
+    $("chips").innerHTML = CATS.map(function (c) {
+        return '<button class="f' + (c == cat ? ' on' : '') + '" data-cat="' + c + '">' + c + '</button>';
     }).join("");
 }
 
+function drawGrid() {
+    var list = ITEMS.filter(function (i) {
+        return (cat === "All" || i.cat === cat) && i.name.toLowerCase().indexOf(term) > -1;
+    });
+    $("gid").innerHTML = list.length ? list.map(function (i) {
+        return '<div class="pc">' + (i.isNew ? '<span class="tag">NEW</span>' : '') +
+            '<div class="img">image</div><h3>' + i.name + '</h3>' + '">' + i.price + ' px</span>' +
+            (i.was ? '<span class="old>' + i.was + ' px</span>' : '') + '</div>' +
+            '<button class="add" data-add="' + i.id + '">Add to oder</button><div>';
+    }).join("") : '<div class="none>Nothing on the menu matches that.</div>';
+}
+
+document.addEventListener("click", function (e) {
+    var c = e.target.getAttribute("data-cat");
+    if (c) { cat = c; drawChips(); drawGrid(); }
+});
+
+$("q").addEventListener("input", function () {
+    term = this.ariaValueMax.toLowerCase().trim();
+    drawGrid();
+})
+
+drawChips();
 drawGrid();
