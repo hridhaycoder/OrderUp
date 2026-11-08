@@ -21,12 +21,33 @@
         <h1>The Inn</h1>
         <div class="note">Heads up: the pictures are placeholders for now. Orders are made in the order they come in and
             everything is in px. </div>
+        <div class="cols">
+            <section>
+                <input class="search" id="q" type="q" type="text" placeholder="Search the menu..." autocomplete="off">
+                <div class="chips" id="chips"></div>
+                <div class="grid" id="grid"></div>
+            </section>
 
-        <section>
-            <input class="search" id="q" type="q" type="text" placeholder="Search the menu..." autocomplete="off">
-            <div class="chips" id="chips"></div>
-            <div class="grid" id="grid"></div>
-        </section>
+            <aside class="order">
+                <h2>Your Order</h2>
+                <label for="who">Name</label>
+                <input class="in" id="who" type="text" placeholder="who is this for?" autocomplete="off">
+                <div id="lines">
+                    <div class="empty">Nothing added yet</div>
+                </div>
+                <div class="tot"><span>Total</span><span id="total">0 PX</span></div>
+                <label for="note">Note</label>
+                <textarea class="in" id="note" placeholder="no onions etc."></textarea>
+                <button class="go" id="go" disabled>Place order</button>
+            </aside>
+
+        </div>
+
+
+
+
+
+
     </div>
     <script src="script.js"></script>
 </body>

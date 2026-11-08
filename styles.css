@@ -217,3 +217,123 @@ h1 {
     background: var(--orange);
     color: #fff
 }
+
+.cols {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    gap: 24px;
+    align-items: start
+}
+
+.order {
+    position: sticky;
+    top: 16px;
+    background: var(--card);
+    border: 3px solid var(--ink);
+    box-shadow: 6px 6px 0 var(--ink);
+    padding: 16px
+}
+
+.order h2 {
+    font-family: var(--px);
+    font-weight: 700;
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 12px
+}
+
+label {
+    display: block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 4px
+}
+
+.in {
+    width: 100%;
+    font: inherit;
+    padding: 8px 10px;
+    border: 3px solid var(--ink);
+    background: var(--cream);
+    color: var(--ink);
+    margin-bottom: 12px;
+    border-radius: 0;
+}
+
+.in:focus {
+    outline: none;
+    background: #fff
+}
+
+.textarea.in {
+    resize: none;
+    height: 52px
+}
+
+.ln {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 2px
+}
+
+.ln .nm {
+    flex: 1
+}
+
+.ln .x {
+    font: inherit;
+    font-weight: 600;
+    width: 24px;
+    height: 24px;
+    border: 2px solid var(--ink);
+    background: var(--cream);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    border-radius: 0
+}
+
+.empty {
+    color: var(--muted);
+    padding: 4px 0 8px
+}
+
+.tot {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    margin: 12px 0 12px
+}
+
+.go {
+    width: 100%;
+    font-family: var(--px);
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--red);
+    color: #fff;
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 0
+}
+
+.go:active {
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--ink)
+}
+
+.go:disabled {
+    background: var(--note);
+    color: var(--muted);
+    box-shadow: none;
+    cursor: not-allowed
+}
