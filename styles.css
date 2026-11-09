@@ -353,3 +353,13 @@ label {
     font-weight: 500;
     min-width: 1.4em;
 }
+
+@media (max-wisth: 900px) {
+    .cols {
+        grid-template-columns: 1fr
+    }
+
+    .order {
+        position: static
+    }
+}
