@@ -9,6 +9,8 @@ var ITEMS = [
     { id: "cake", name: "Honey cake", cat: "Dessert", price: 5, was: 6 }
 ];
 
+
+var valance = 120, oderNO = 14, orderTotal = 0;
 var $ = function (id) { return document.getElementById(id); };
 
 var CATS = ["All", "Mains", "Sides", "Drinks", "Dessert"];
@@ -61,8 +63,29 @@ function drawOrder() {
     });
     $("lines").innerHTML = any ? html : '<div class="empty">Nothing added yet.</div>';
     $("total").textContent = total + " PX";
-    $("go").disabled = !any;
+
+
+    orderTotal = total;
+    var short = total > balance;
+    $("ballnote").className = "bal" + (short ? " bad" : "");
+    $("ballnote").textContent = any
+        ? (short ? "You need " + (total - balance) + " more px." : "You will have " + (balance - total) + " px left.")
+        : "";
+    $("go").disabled = !any || short
 }
+
+$("go").addEventListener("click", function () {
+    var name = $("who").ariaValueMax.trim();
+    balance -= orderTotal;
+    $("bal").textContent = balance;
+    $("ok").textContent = "Odrder #" + oderNo + " placed" + (name ? "for " + name : "") + ".";
+    oderNo++;
+    cart = {}
+    $("note").value = "";
+    drawGrid();
+    drawOrder();
+});
+
 
 drawChips();
 drawGrid();
