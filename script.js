@@ -1,17 +1,18 @@
 var ITEMS = [
     { id: "stew", name: "Beef stew", cat: "Mains", price: 8 },
     { id: "chicken", name: "Roast chicken", cat: "Mains", price: 12 },
-    { id: "pie", name: "Mushroom pie", cat: "Mains", price: 7 },
+    { id: "pie", name: "Pumpkin pie", cat: "Mains", price: 7 },
     { id: "bread", name: "Bread loaf", cat: "Sides", price: 3 },
-    { id: "salad", name: "Garden salad", cat: "Sides", price: 4 },
+    { id: "salad", name: "Ceasar salad", cat: "Sides", price: 4 },
     { id: "cider", name: "Apple cider", cat: "Drinks", price: 4 },
-    { id: "tea", name: "Berry tea", cat: "Drinks", price: 3, isNew: true },
-    { id: "cake", name: "Honey cake", cat: "Dessert", price: 5, was: 6 }
+    { id: "tea", name: "Tea", cat: "Drinks", price: 3, isNew: true },
+    { id: "cake", name: "Chocolate cake", cat: "Dessert", price: 5, was: 6 }
 ];
 
 
-var valance = 120, oderNO = 14, orderTotal = 0;
+var balance = 120, oderNO = 14, orderTotal = 0;
 var $ = function (id) { return document.getElementById(id); };
+var cart = {};
 
 var CATS = ["All", "Mains", "Sides", "Drinks", "Dessert"];
 var cat = "All", term = "";
@@ -26,7 +27,7 @@ function drawGrid() {
     var list = ITEMS.filter(function (i) {
         return (cat === "All" || i.cat === cat) && i.name.toLowerCase().indexOf(term) > -1;
     });
-    $("gid").innerHTML = list.length ? list.map(function (i) {
+    $("grid").innerHTML = list.length ? list.map(function (i) {
         return '<div class="pc">' + (i.isNew ? '<span class="tag">NEW</span>' : '') +
             '<div class="img">image</div><h3>' + i.name + '</h3>' + '">' + i.price + ' px</span>' +
             (i.was ? '<span class="old>' + i.was + ' px</span>' : '') + '</div>' +

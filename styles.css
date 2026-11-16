@@ -1,9 +1,9 @@
 :root {
     --cream: #f5eed7;
-    --card: #Faf6e6;
+    --card: #faf6e6;
     --note: #ece2c3;
     --ink: #1b1b29;
-    --muted: #7a77667;
+    --muted: #7a7767;
     --red: #d9475a;
     --orange: #ee8f3f;
     --green: #5aa469;
@@ -12,16 +12,16 @@
 }
 
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 
 body {
     margin: 0;
     background: var(--cream);
     color: var(--ink);
-    font-family: var(--san);
+    font-family: var(--sans);
     font-size: 14px;
-    line-height: 1.45em
+    line-height: 1.45
 }
 
 .bar {
@@ -39,7 +39,19 @@ body {
     letter-spacing: 3px
 }
 
+.chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 3px solid var(--ink);
+    background: var(--card);
+    padding: 4px 12px 4px 6px;
+    font-weight: 600;
+    font-size: 16px
+}
+
 .chip i {
+    display: block;
     width: 22px;
     height: 22px;
     background: var(--orange);
@@ -55,7 +67,7 @@ body {
 
 .page {
     max-width: 1000px;
-    padding: 32px 28 px 56px;
+    padding: 32px 28px 56px;
     margin: 0 auto
 }
 
@@ -71,8 +83,8 @@ h1 {
 
 .note {
     background: var(--note);
-    border: 2px solid var(--ink);
-    padding: 12x 16px;
+    border: 3px solid var(--ink);
+    padding: 12px 16px;
     margin-bottom: 20px
 }
 
