@@ -20,19 +20,29 @@ var cat = "All", term = "";
 function drawChips() {
     $("chips").innerHTML = CATS.map(function (c) {
         return '<button class="f' + (c == cat ? ' on' : '') + '" data-cat="' + c + '">' + c + '</button>';
-    }).join("");
+    })
 }
 
 function drawGrid() {
     var list = ITEMS.filter(function (i) {
         return (cat === "All" || i.cat === cat) && i.name.toLowerCase().indexOf(term) > -1;
     });
+
     $("grid").innerHTML = list.length ? list.map(function (i) {
-        return '<div class="pc">' + (i.isNew ? '<span class="tag">NEW</span>' : '') +
-            '<div class="img">image</div><h3>' + i.name + '</h3>' + '">' + i.price + ' px</span>' +
-            (i.was ? '<span class="old>' + i.was + ' px</span>' : '') + '</div>' +
-            '<button class="add" data-add="' + i.id + '">' + (cart[i.id] ? 'Add another (' + cart[i.id] + ')' : 'Add to order') + '</button></div>';
-    }).join("") : '<div class="none>Nothing on the menu matches that.</div>';
+        var qty = cart[i.id] || 0;
+        var pic = i.img ? '<img src="' + i.img + '" alt="' + i.name + '">' : 'image';
+        var newTag = i.isNew ? '<span class="tag">NEW</span>' : '';
+        var oldPrice = i.was ? '<span class="old">' + i.was + ' px</span>' : '';
+        var priceClass = i.was ? 'now sale' : 'now';
+        var label = qty ? 'Add another (' + qty + ')' : 'Add to order';
+
+        return '<div class="pc">' + newTag +
+            '<div class="img">' + pic + '</div>' +
+            '<h3>' + i.name + '</h3>' +
+            '<div class="pr"><span class="' + priceClass + '">' + i.price + ' px</span>' + oldPrice + '</div>' +
+            '<button class="add" data-add="' + i.id + '">' + label + '</button>' +
+            '</div>';
+    }).join("") : '<div class="none">Nothing on the menu matches that.</div>';
 }
 
 document.addEventListener("click", function (e) {
