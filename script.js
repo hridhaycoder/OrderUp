@@ -1,5 +1,18 @@
 var ITEMS = [
-    { id: "cake", name: "Chocolate cake", cat: "Dessert", price: 5, was: 6, img: "images/cake.png" }
+    { id: "cake", name: "Chocolate cake", cat: "Dessert", price: 5, was: 6, img: "images/cake.png" },
+    { id: "burrito", name: "Burrito", cat: "Mains", price: 8, img: "images/burrito.png" },
+    { id: "burger", name: "Cheese ubrger", cat: "Mains", price: 10, img: "images/burger.png" },
+    { id: "curry", name: "Curry", cat: "Mains", price: 7, img: "images/curry.png" },
+    { id: "frenchfries", name: "French fries", cat: "Sides", price: 3, img: "images/frenchfries.png" },
+    { id: "eggsalad", name: "Egg salad", cat: "Mains", price: 6, img: "images/eggsalad.png" },
+    { id: "garlicbread", name: "Garlic bread", cat: "Sides", price: 2, img: "images/garlicbread.png" },
+    { id: "omlet", name: "Omlet", cat: "Mains", price: 9, img: "images/omlet.png" },
+    { id: "friedeggs", name: "Fried eggs", cat: "Mains", price: 7, img: "images/friedeggs.png" },
+    { id: "hotdog", name: "Hotdog", cat: "Mains", price: 6, img: "images/hotdog.png" },
+    { id: "macncheese", name: "Mac and cheese", cat: "Mains", price: 8, img: "images/macncheese.png" },
+    { id: "pizza", name: "Pepperoni pizza", cat: "Mains", price: 14, img: "images/pizza.png" },
+    { id: "meatball", name: "Meatballs", cat: "Sides", price: 3, img: "images/meatball.png" }
+
 ];
 
 
