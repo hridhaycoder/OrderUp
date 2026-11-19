@@ -1,7 +1,7 @@
 var ITEMS = [
     { id: "cake", name: "Chocolate cake", cat: "Dessert", price: 5, was: 6, img: "images/cake.png" },
     { id: "burrito", name: "Burrito", cat: "Mains", price: 8, img: "images/burrito.png" },
-    { id: "burger", name: "Cheese ubrger", cat: "Mains", price: 10, img: "images/burger.png" },
+    { id: "burger", name: "Cheese burger", cat: "Mains", price: 10, img: "images/burger.png" },
     { id: "curry", name: "Curry", cat: "Mains", price: 7, img: "images/curry.png" },
     { id: "frenchfries", name: "French fries", cat: "Sides", price: 3, img: "images/frenchfries.png" },
     { id: "eggsalad", name: "Egg salad", cat: "Mains", price: 6, img: "images/eggsalad.png" },
