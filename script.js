@@ -11,7 +11,17 @@ var ITEMS = [
     { id: "hotdog", name: "Hotdog", cat: "Mains", price: 6, img: "images/hotdog.png" },
     { id: "macncheese", name: "Mac and cheese", cat: "Mains", price: 8, img: "images/macncheese.png" },
     { id: "pizza", name: "Pepperoni pizza", cat: "Mains", price: 14, img: "images/pizza.png" },
-    { id: "meatball", name: "Meatballs", cat: "Sides", price: 3, img: "images/meatball.png" }
+    { id: "meatball", name: "Meatballs", cat: "Sides", price: 3, img: "images/meatball.png" },
+    { id: "fruitcake", name: "Fruit cake", cat: "Dessert", price: 4, was: 5, img: "images/fruitcake.png" },
+    { id: "gummybear", name: "Giant gummy bear", cat: "Dessert", price: 6, img: "images/giantgummybear.png" },
+    { id: "gingerbreadmen", name: "Gingerbread men", cat: "Dessert", price: 3, isNew: true, img: "images/gingerbreadman.png" },
+    { id: "icecream", name: "All ice cream", cat: "Desserrt", price: 3, img: "images/icecream.png" },
+    { id: "jelly", name: "Jelly", cat: "Dessert", price: 4, img: "images/jelly.png" },
+    { id: "popcorn", name: "Butter popcorn", cat: "Dessert", price: 3, img: "images/popcorn.png" },
+    { id: "strawberrycake", name: "Strawberry cake", cat: "Dessert", price: 6, img: "images/strawberrycake.png" },
+    { id: "pancakes", name: "Pancakes", cat: "Mains", price: 7, img: "images/pancakes.png" },
+    { id: "cutsteak", name: "Platter of steak", cat: "Mains", price: 12, img: "images/cutsteak.png" },
+    { id: "sandwich", name: "Sandwich", cat: "Mains", price: 9, img: "images/sandwich.png" }
 
 ];
 
