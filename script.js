@@ -1,5 +1,5 @@
 var ITEMS = [
-    { id: "cake", name: "Chocolate cake", cat: "Dessert", price: 5, was: 6, img: "images/cake.png" },
+    { id: "cake", name: "Chocolate cake", cat: "Dessert", price: 5, was: 6, isNew: true, img: "images/cake.png" },
     { id: "burrito", name: "Burrito", cat: "Mains", price: 8, img: "images/burrito.png" },
     { id: "burger", name: "Cheese burger", cat: "Mains", price: 10, img: "images/burger.png" },
     { id: "curry", name: "Curry", cat: "Mains", price: 7, img: "images/curry.png" },
@@ -13,11 +13,11 @@ var ITEMS = [
     { id: "pizza", name: "Pepperoni pizza", cat: "Mains", price: 14, img: "images/pizza.png" },
     { id: "meatball", name: "Meatballs", cat: "Sides", price: 3, img: "images/meatball.png" },
     { id: "fruitcake", name: "Fruit cake", cat: "Dessert", price: 4, was: 5, img: "images/fruitcake.png" },
-    { id: "gummybear", name: "Giant gummy bear", cat: "Dessert", price: 6, img: "images/giantgummybear.png" },
+    { id: "gummybear", name: "Giant gummy bear", cat: "Dessert", price: 6, isNew: true, img: "images/giantgummybear.png" },
     { id: "gingerbreadmen", name: "Gingerbread men", cat: "Dessert", price: 3, isNew: true, img: "images/gingerbreadman.png" },
-    { id: "icecream", name: "All ice cream", cat: "Desserrt", price: 3, img: "images/icecream.png" },
+    { id: "icecream", name: "Chocolate, Strawberry, and vanilla ice cream", cat: "Dessert", price: 3, img: "images/icecream.png" },
     { id: "jelly", name: "Jelly", cat: "Dessert", price: 4, img: "images/jelly.png" },
-    { id: "popcorn", name: "Butter popcorn", cat: "Dessert", price: 3, img: "images/popcorn.png" },
+    { id: "popcorn", name: "Butter popcorn", cat: "Dessert", price: 3, was: 4, img: "images/popcorn.png" },
     { id: "strawberrycake", name: "Strawberry cake", cat: "Dessert", price: 6, img: "images/strawberrycake.png" },
     { id: "pancakes", name: "Pancakes", cat: "Mains", price: 7, img: "images/pancakes.png" },
     { id: "cutsteak", name: "Platter of steak", cat: "Mains", price: 12, img: "images/cutsteak.png" },
@@ -25,11 +25,9 @@ var ITEMS = [
     { id: "spaghetti", name: "Spaghetti", cat: "Mains", price: 7, img: "images/spaghetti.png" },
     { id: "steak", name: "Steak", cat: "Mains", price: 10, img: "images/steak.png" },
     { id: "pudding", name: "Caramel Pudding", cat: "Dessert", price: 4, img: "images/pudding.png" },
-    { id: "waffles", name: "Waffles and syrup", cat: "Sides", price: 6, img: "images/waffle.png" },
+    { id: "waffles", name: "Waffles and syrup", cat: "Sides", price: 6, isNew: true, img: "images/waffle.png" },
     { id: "sushi", name: "Sushi", cat: "Sides", price: 3, img: "images/sushi.png" },
-    { id: "taco", name: "Tacos", cat: "Sides", price: 4, img: "images/taco.png" }
-
-
+    { id: "taco", name: "Tacos", cat: "Sides", price: 4, was: 5, img: "images/taco.png" }
 ];
 
 
@@ -37,7 +35,7 @@ var balance = 120, oderNO = 14, orderTotal = 0;
 var $ = function (id) { return document.getElementById(id); };
 var cart = {};
 
-var CATS = ["All", "Mains", "Sides", "Drinks", "Dessert"];
+var CATS = ["All", "Mains", "Sides", , "Dessert"];
 var cat = "All", term = "";
 
 function drawChips() {

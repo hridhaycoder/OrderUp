@@ -22,6 +22,8 @@ the ordering logic:
 
 ![alt text](image-1.png)
 
+I used a dictionary with a list of the items with parameters like the price, a was parameter for an original price, a regular name, a name to be displayed, a file path to provide the image, an is new paramter to add a green popup to see if it's new or not.
+
 Getting Started
 
 No dependencies or libraries needed to install, hosted on vercel and just click the link: https://orderup-ten.vercel.app/ to go to the website, you might need to be on the latest version of whatever browser you're using I don't really know.
