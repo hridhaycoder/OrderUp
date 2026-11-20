@@ -21,7 +21,14 @@ var ITEMS = [
     { id: "strawberrycake", name: "Strawberry cake", cat: "Dessert", price: 6, img: "images/strawberrycake.png" },
     { id: "pancakes", name: "Pancakes", cat: "Mains", price: 7, img: "images/pancakes.png" },
     { id: "cutsteak", name: "Platter of steak", cat: "Mains", price: 12, img: "images/cutsteak.png" },
-    { id: "sandwich", name: "Sandwich", cat: "Mains", price: 9, img: "images/sandwich.png" }
+    { id: "sandwich", name: "Sandwich", cat: "Mains", price: 9, img: "images/sandwich.png" },
+    { id: "spaghetti", name: "Spaghetti", cat: "Mains", price: 7, img: "images/spaghetti.png" },
+    { id: "steak", name: "Steak", cat: "Mains", price: 10, img: "images/steak.png" },
+    { id: "pudding", name: "Caramel Pudding", cat: "Dessert", price: 4, img: "images/pudding.png" },
+    { id: "waffles", name: "Waffles and syrup", cat: "Sides", price: 6, img: "images/waffle.png" },
+    { id: "sushi", name: "Sushi", cat: "Sides", price: 3, img: "images/sushi.png" },
+    { id: "taco", name: "Tacos", cat: "Sides", price: 4, img: "images/taco.png" }
+
 
 ];
 
