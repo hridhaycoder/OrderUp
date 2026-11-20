@@ -393,3 +393,10 @@ label {
         position: static
     }
 }
+
+.note {
+    background: var(--note);
+    border: 2px solid var(--ink);
+    padding: 12px 16px;
+    margin-bottom: 20px
+}

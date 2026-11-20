@@ -34,6 +34,6 @@ License
 
 I didn't get one
 
-Shoutout to ghostpixells sprites on itch.io, they're really good and you should go check them out
+Shoutout to ghostpixells sprites on itch.io, they're really good and you should go check them out on itch.io
 
 
